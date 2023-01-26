@@ -1,0 +1,32 @@
+body, html{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+.display-grid-context{
+  display: grid;
+  grid-template-rows: minmax(600px,1fr) 1fr minmax(120rem, 1fr);
+  height: 100%;
+  overflow: scroll;
+}
+
+.menu-grid{
+  background-color: yellow ;
+  height: 15vh;
+}
+
+.content-grid{
+  background-color: blue ;
+  min-height: 55vh;
+}
+
+.footer-grid{
+  background-color: green ;
+  /* position: fixed;
+  bottom: 0;
+  width: 100vw; */
+  height: 30vh;
+}

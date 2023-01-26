@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <title>Perfil</title>
+</head>
+
+<body>
+  <div class="menu-grid"></div>
+  <div class="content-grid">
+    <div id="conteudo"></div>
+  </div>
+  <div class="footer-grid"></div>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.hashchange.js"></script>
+  <script src="js/jquery.storage.js"></script>
+  <script src="js/jquery-confirm.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/funcoes.js"></script>
+  <script src="js/js.js"></script>
+  <script>
+    var ctrlElemento;
+    var pageHash;
+    window.onload = {}
+
+    function imgSlider(caminho) {
+      document.querySelector('.consultor').src = caminho;
+    }
+
+    function changeBgColor(cor) {
+      const sec = document.querySelector('.sec');
+      sec.style.background = cor;
+    }
+
+    var onUrlChange = function () {
+
+      pageHash = window.location.hash;
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+      return true;
+    }
+
+    adicionaEventoHashChange('loading', 'conteudo', onUrlChange);
+    imgLoad = 'loading';
+
+    $(document).ready(function () {
+
+      AOS.init({
+        duration: 1500,
+      });
+
+      if (!urlHashExists()) {
+        redirecionarPagina("home/index.php");
+      }
+      $('.idHome').on("click", () => {
+        redirecionarPagina("home/index.php");
+        changeBgColor('#0062be');
+      });
+      $('.idDna').on("click", () => {
+        redirecionarPagina("dna/index.php");
+        changeBgColor('linear-gradient(135deg, rgba(119,30,48,1) 0%, rgba(105,26,43,1) 37%, rgba(0,0,0,1) 100%)');
+      });
+      $('.idCursos').on("click", () => {
+        window.open('https://ead.brastream.io/eadmatheus#cursos_disponiveis/', '_blank');
+      });
+      $('.idContato').on("click", () => {
+        redirecionarPagina("contato/index.php");
+        changeBgColor('linear-gradient(135deg, rgba(12,116,117,1) 0%, rgba(6,119,57,1) 37%, rgba(0,0,0,1) 100%)');
+      });
+    });
+
+  </script>
+</body>
+
+</html>

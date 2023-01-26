@@ -1,0 +1,51 @@
+.grid-home{
+  background-color: orangered;
+  display: grid;
+  grid-template-columns: 40vw 1fr;
+  gap: 2rem;
+  min-height: 55vh;
+}
+
+
+.div-imagem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: #fff 1px solid; */
+}
+
+.div-conteudo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: #fff 1px solid; */
+  padding: 8rem 4rem;
+}
+
+.div-conteudo .texto{
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  letter-spacing: 1px;
+}
+
+.botao-home{
+  margin: 2rem;
+  background-color: rgb(25, 0, 255);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 2px 1px 5px 2px #444;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.botao-home:hover{
+  transform: scale(1.02);
+}
+
+.botao-home button{
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
