@@ -14,8 +14,9 @@ body, html{
 }
 
 .menu-grid{
-  background-color: yellow ;
+  background-color: rgb(238, 238, 57) ;
   height: 15vh;
+  border-bottom: 2rem solid #222;
 }
 
 .content-grid{
